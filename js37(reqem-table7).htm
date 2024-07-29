@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reqem-table7</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        tr, td{
+            padding: 10px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <table id="tab7"></table>
+
+    <script>
+        const tab7 = document.querySelector("#tab7")
+        kod = ''
+            for (let i = 2; i <= 6; i++) {
+               kod += `<tr>`
+                    for (let j = 1; j <= 5; j++) {
+                        // kod += `<td>i ${i} j${j}</td>` 
+                        if ( i <= j ){
+                            kod += `<td>${''}</td>`
+                        }else{
+                            kod += `<td>${j}</td>`
+                        }   
+                    }
+               kod += `</tr>`
+            }
+        tab7.innerHTML = kod
+    </script>
+</body>
+</html>

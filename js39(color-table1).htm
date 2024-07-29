@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color-table1</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        tr, td{
+            padding: 10px;
+            border: 1px solid black;
+        }
+        .green{background-color: green;}
+    </style>
+</head>
+<body>
+    <table id="tab1"></table>
+
+    <script>
+        const tab1 = document.querySelector("#tab1")
+        kod = ''
+            for (let i = 1; i <=4; i++) {
+                kod += `<tr>`
+                    for (let j = 1; j <= 4; j++) {
+                        if( (i == 1) || (i == 4) || ( j == 1) || ( j == 4)){
+                            kod += `<td class = "green"></td>`
+                        }else{
+                            kod += `<td></td>`
+                        }
+                     }
+                kod += `</tr>`
+            }
+        tab1.innerHTML = kod
+    </script>
+    
+</body>
+</html>
